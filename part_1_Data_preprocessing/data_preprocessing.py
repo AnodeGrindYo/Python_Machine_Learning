@@ -15,3 +15,4 @@ dataset = pd.read_csv('Data.csv') # permet d'importer les datas du csv
 # ':' toutes les lignes du dataset
 #☺ ':-1' toutes les colones sauf la dernière
 X = dataset.iloc[:, :-1].values # récupération des indices du dataset
+Y = dataset.iloc[:, -1].values
