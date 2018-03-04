@@ -54,3 +54,9 @@ X_train = sc.fit_transform(X_train)
 # même chose pour X_test
 X_test = sc.transform(X_test)
 
+# Regression linéaire
+# Regression lineaire simple: y = b0 + b1*x1
+# Y est la variable dépendante (DV)
+# x1 est la variable indépendante (IV) qui (en théorie) fait changer Y
+# b1 est le coefficient de la variable indépendante x1 plus b1 est élevé, plus la droite est "pentue"
+# b0 est la valeur de départ (valeur que prend y quand x = 0)
