@@ -38,3 +38,19 @@ y = labelencoder_Y.fit_transform(y)
 # Diviser le dataset entre le Training set et le Test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size = 0.2, random_state = 0) # random_state n'est pas obligatoire. Si on met la même valeur, on obtiendra les mêmesrésultats
+
+
+# Feature Scaling
+# ici, on va mettre toutes nos variables à la même echelle
+# Standardisation               | Normalisation 
+#--------------------------------------------------------------
+#           x-mean(x)           |          x-min(x)
+#xstand = --------------------- | xnorm = --------------- 
+#         standard deviation(x) |         max(x)-min(x)
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+# on va lier notre objet sc à X_train.
+X_train = sc.fit_transform(X_train)
+# même chose pour X_test
+X_test = sc.transform(X_test)
+
