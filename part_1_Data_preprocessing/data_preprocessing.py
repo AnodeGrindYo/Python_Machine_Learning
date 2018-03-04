@@ -33,3 +33,8 @@ onehotencoder = OneHotEncoder(categorical_features = [0])
 x = onehotencoder.fit_transform(x).toarray()
 labelencoder_Y = LabelEncoder()
 y = labelencoder_Y.fit_transform(y)
+
+
+# Diviser le dataset entre le Training set et le Test set
+from sklearn.model_selection import train_test_split
+X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size = 0.2, random_state = 0) # random_state n'est pas obligatoire. Si on met la même valeur, on obtiendra les mêmesrésultats
